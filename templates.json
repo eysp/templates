@@ -4,13 +4,17 @@
     {
       "id": 1,
       "type": 1,
-      "title": "Registry",
-      "description": "Docker image registry",
-      "categories": ["docker"],
+      "title": "镜像仓库",
+      "description": "Docker 镜像仓库",
+      "categories": [
+        "docker"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
       "image": "registry:latest",
-      "ports": ["5000/tcp"],
+      "ports": [
+        "5000/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/lib/registry"
@@ -20,13 +24,17 @@
     {
       "id": 2,
       "type": 1,
-      "title": "Registry (cache)",
-      "description": "Docker image registry configured as a DockerHub pull through cache",
-      "categories": ["docker"],
+      "title": "镜像仓库（缓存）",
+      "description": "配置为 DockerHub 拉取直通缓存的 Docker 镜像仓库",
+      "categories": [
+        "docker"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
       "image": "registry:latest",
-      "ports": ["5000/tcp"],
+      "ports": [
+        "5000/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/lib/registry"
@@ -44,8 +52,10 @@
       "id": 3,
       "type": 1,
       "title": "Ubuntu",
-      "description": "Debian-based Linux operating system",
-      "categories": ["operating-system"],
+      "description": "基于 Debian 的 Linux 操作系统",
+      "categories": [
+        "操作系统"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ubuntu.png",
       "image": "ubuntu:latest",
@@ -56,8 +66,10 @@
       "id": 4,
       "type": 1,
       "title": "NodeJS",
-      "description": "JavaScript-based platform for server-side and networking applications",
-      "categories": ["development"],
+      "description": "用于服务器端和网络应用的基于 JavaScript 的平台",
+      "categories": [
+        "开发"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/node.png",
       "image": "node:latest",
@@ -68,12 +80,17 @@
       "id": 5,
       "type": 1,
       "title": "Nginx",
-      "description": "High performance web server",
-      "categories": ["webserver"],
+      "description": "高性能 Web 服务器",
+      "categories": [
+        "Web 服务器"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/nginx.png",
       "image": "nginx:latest",
-      "ports": ["80/tcp", "443/tcp"],
+      "ports": [
+        "80/tcp",
+        "443/tcp"
+      ],
       "volumes": [
         {
           "container": "/etc/nginx"
@@ -87,12 +104,16 @@
       "id": 6,
       "type": 1,
       "title": "Httpd",
-      "description": "Open-source HTTP server",
-      "categories": ["webserver"],
+      "description": "开源 HTTP 服务器",
+      "categories": [
+        "Web 服务器"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/httpd.png",
       "image": "httpd:latest",
-      "ports": ["80/tcp"],
+      "ports": [
+        "80/tcp"
+      ],
       "volumes": [
         {
           "container": "/usr/local/apache2/htdocs/"
@@ -103,12 +124,16 @@
       "id": 7,
       "type": 1,
       "title": "Caddy",
-      "description": "Open-source web server with automatic HTTPS written in Go",
-      "categories": ["webserver"],
+      "description": "采用 Go 语言编写的具有自动 HTTPS 功能的开源 Web 服务器",
+      "categories": [
+        "Web 服务器"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/caddy.png",
       "image": "caddy:latest",
-      "ports": ["80/tcp"],
+      "ports": [
+        "80/tcp"
+      ],
       "volumes": [
         {
           "container": "/data"
@@ -119,15 +144,17 @@
       "id": 8,
       "type": 1,
       "title": "MySQL",
-      "description": "The most popular open-source database",
-      "categories": ["database"],
+      "description": "最流行的开源数据库",
+      "categories": [
+        "数据库"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mysql.png",
       "image": "mysql/mysql-server:5.7",
       "env": [
         {
           "name": "MYSQL_ROOT_PASSWORD",
-          "label": "Root password"
+          "label": "Root 密码"
         },
         {
           "name": "MYSQL_ROOT_HOST",
@@ -135,7 +162,9 @@
           "preset": true
         }
       ],
-      "ports": ["3306/tcp"],
+      "ports": [
+        "3306/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/lib/mysql"
@@ -146,18 +175,22 @@
       "id": 9,
       "type": 1,
       "title": "MariaDB",
-      "description": "Performance beyond MySQL",
-      "categories": ["database"],
+      "description": "超越 MySQL 的性能",
+      "categories": [
+        "数据库"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
       "image": "mariadb:latest",
       "env": [
         {
           "name": "MYSQL_ROOT_PASSWORD",
-          "label": "Root password"
+          "label": "Root 密码"
         }
       ],
-      "ports": ["3306/tcp"],
+      "ports": [
+        "3306/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/lib/mysql"
@@ -168,22 +201,26 @@
       "id": 10,
       "type": 1,
       "title": "PostgreSQL",
-      "description": "The most advanced open-source database",
-      "categories": ["database"],
+      "description": "最先进的开源数据库",
+      "categories": [
+        "数据库"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
       "image": "postgres:latest",
       "env": [
         {
           "name": "POSTGRES_USER",
-          "label": "Superuser"
+          "label": "超级用户"
         },
         {
           "name": "POSTGRES_PASSWORD",
-          "label": "Superuser password"
+          "label": "超级用户密码"
         }
       ],
-      "ports": ["5432/tcp"],
+      "ports": [
+        "5432/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/lib/postgresql/data"
@@ -194,12 +231,16 @@
       "id": 11,
       "type": 1,
       "title": "Mongo",
-      "description": "Open-source document-oriented database",
-      "categories": ["database"],
+      "description": "开源文档型数据库",
+      "categories": [
+        "数据库"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mongo.png",
       "image": "mongo:latest",
-      "ports": ["27017/tcp"],
+      "ports": [
+        "27017/tcp"
+      ],
       "volumes": [
         {
           "container": "/data/db"
@@ -210,12 +251,17 @@
       "id": 12,
       "type": 1,
       "title": "CrateDB",
-      "description": "An open-source distributed SQL database",
-      "categories": ["database"],
+      "description": "一个开源的分布式 SQL 数据库",
+      "categories": [
+        "数据库"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cratedb.png",
       "image": "crate:latest",
-      "ports": ["4200/tcp", "4300/tcp"],
+      "ports": [
+        "4200/tcp",
+        "4300/tcp"
+      ],
       "volumes": [
         {
           "container": "/data"
@@ -226,12 +272,17 @@
       "id": 13,
       "type": 1,
       "title": "Elasticsearch",
-      "description": "Open-source search and analytics engine",
-      "categories": ["database"],
+      "description": "开源搜索和分析引擎",
+      "categories": [
+        "数据库"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/elasticsearch.png",
       "image": "docker.elastic.co/elasticsearch/elasticsearch:7.15.1",
-      "ports": ["9200/tcp", "9300/tcp"],
+      "ports": [
+        "9200/tcp",
+        "9300/tcp"
+      ],
       "volumes": [
         {
           "container": "/usr/share/elasticsearch/data"
@@ -242,13 +293,20 @@
       "id": 14,
       "type": 1,
       "title": "GitLab CE",
-      "description": "Open-source end-to-end software development platform",
-      "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/ee/install/docker.html\" target=\"_blank\">GitLab documentation</a> to get started.",
-      "categories": ["development", "project-management"],
+      "description": "开源端到端软件开发平台",
+      "note": "默认用户名为 <b>root</b>。请查阅 <a href=\"https://docs.gitlab.com/ee/install/docker.html\" target=\"_blank\">GitLab 文档</a>以开始使用。",
+      "categories": [
+        "开发",
+        "项目管理"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/gitlab_ce.png",
       "image": "gitlab/gitlab-ce:latest",
-      "ports": ["80/tcp", "443/tcp", "22/tcp"],
+      "ports": [
+        "80/tcp",
+        "443/tcp",
+        "22/tcp"
+      ],
       "volumes": [
         {
           "container": "/etc/gitlab"
@@ -265,20 +323,25 @@
       "id": 15,
       "type": 1,
       "title": "Minio",
-      "description": "A distributed object storage server built for cloud applications and devops",
-      "categories": ["storage"],
+      "description": "为云应用和 DevOps 构建的分布式对象存储服务器",
+      "categories": [
+        "存储"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
       "image": "quay.io/minio/minio:latest",
-      "ports": ["9000/tcp", "9001/tcp"],
+      "ports": [
+        "9000/tcp",
+        "9001/tcp"
+      ],
       "env": [
         {
           "name": "MINIO_ROOT_USER",
-          "label": "Root user"
+          "label": "Root 用户"
         },
         {
           "name": "MINIO_ROOT_PASSWORD",
-          "label": "Root password"
+          "label": "Root 密码"
         }
       ],
       "volumes": [
@@ -295,20 +358,24 @@
       "id": 16,
       "type": 1,
       "title": "Scality S3",
-      "description": "Standalone AWS S3 protocol server",
-      "categories": ["storage"],
+      "description": "独立的 AWS S3 协议服务器",
+      "categories": [
+        "存储"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/scality-s3.png",
       "image": "scality/s3server",
-      "ports": ["8000/tcp"],
+      "ports": [
+        "8000/tcp"
+      ],
       "env": [
         {
           "name": "SCALITY_ACCESS_KEY",
-          "label": "Scality S3 access key"
+          "label": "Scality S3 访问密钥"
         },
         {
           "name": "SCALITY_SECRET_KEY",
-          "label": "Scality S3 secret key"
+          "label": "Scality S3 秘密密钥"
         }
       ],
       "volumes": [
@@ -324,13 +391,17 @@
       "id": 17,
       "type": 1,
       "title": "SQL Server",
-      "description": "Microsoft SQL Server on Linux",
-      "categories": ["database"],
+      "description": "Linux 上的 Microsoft SQL Server",
+      "categories": [
+        "数据库"
+      ],
       "platform": "linux",
-      "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
+      "note": "密码需要至少包含 8 个字符，包括大写字母、小写字母、十进制数字和/或非字母数字符号。",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
       "image": "mcr.microsoft.com/mssql/server:2019-latest",
-      "ports": ["1433/tcp"],
+      "ports": [
+        "1433/tcp"
+      ],
       "env": [
         {
           "name": "ACCEPT_EULA",
@@ -339,7 +410,7 @@
         },
         {
           "name": "SA_PASSWORD",
-          "label": "SA password"
+          "label": "SA 密码"
         }
       ]
     },
@@ -347,13 +418,17 @@
       "id": 18,
       "type": 1,
       "title": "SQL Server",
-      "description": "Microsoft SQL Server Developer for Windows containers",
-      "categories": ["database"],
+      "description": "用于 Windows 容器的 Microsoft SQL Server Developer 版",
+      "categories": [
+        "数据库"
+      ],
       "platform": "windows",
-      "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
+      "note": "密码需要至少包含 8 个字符，包括大写字母、小写字母、十进制数字和/或非字母数字符号。",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
       "image": "microsoft/mssql-server-windows-developer:latest",
-      "ports": ["1433/tcp"],
+      "ports": [
+        "1433/tcp"
+      ],
       "env": [
         {
           "name": "ACCEPT_EULA",
@@ -362,7 +437,7 @@
         },
         {
           "name": "sa_password",
-          "label": "SA password"
+          "label": "SA 密码"
         }
       ],
       "volumes": [
@@ -375,13 +450,17 @@
       "id": 19,
       "type": 1,
       "title": "SQL Server Express",
-      "description": "Microsoft SQL Server Express for Windows containers",
-      "categories": ["database"],
+      "description": "用于 Windows 容器的 Microsoft SQL Server Express 版",
+      "categories": [
+        "数据库"
+      ],
       "platform": "windows",
-      "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
+      "note": "密码需要至少包含 8 个字符，包括大写字母、小写字母、十进制数字和/或非字母数字符号。",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
       "image": "microsoft/mssql-server-windows-express:latest",
-      "ports": ["1433/tcp"],
+      "ports": [
+        "1433/tcp"
+      ],
       "env": [
         {
           "name": "ACCEPT_EULA",
@@ -390,7 +469,7 @@
         },
         {
           "name": "sa_password",
-          "label": "SA password"
+          "label": "SA 密码"
         }
       ],
       "volumes": [
@@ -403,12 +482,16 @@
       "id": 20,
       "type": 1,
       "title": "Solr",
-      "description": "Open-source enterprise search platform",
-      "categories": ["search-engine"],
+      "description": "开源企业搜索平台",
+      "categories": [
+        "搜索引擎"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/solr.png",
       "image": "solr:latest",
-      "ports": ["8983/tcp"],
+      "ports": [
+        "8983/tcp"
+      ],
       "volumes": [
         {
           "container": "/opt/solr/mydata"
@@ -419,12 +502,16 @@
       "id": 21,
       "type": 1,
       "title": "Redis",
-      "description": "Open-source in-memory data structure store",
-      "categories": ["database"],
+      "description": "开源内存数据结构存储",
+      "categories": [
+        "数据库"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
       "image": "redis:latest",
-      "ports": ["6379/tcp"],
+      "ports": [
+        "6379/tcp"
+      ],
       "volumes": [
         {
           "container": "/data"
@@ -434,10 +521,12 @@
     {
       "id": 22,
       "type": 2,
-      "title": "Swarm monitoring",
-      "description": "Monitor your cluster performances with Prometheus & Grafana",
-      "note": "Requires Docker version 19.03.0+. <b>Make sure to add the <code>monitoring == true</code> one of your Swarm manager node before deploying this stack.</b>",
-      "categories": ["Monitoring"],
+      "title": "Swarm 监控",
+      "description": "使用 Prometheus 和 Grafana 监控您的集群性能",
+      "note": "需要 Docker 19.03.0+ 版本。<b>在部署此堆栈之前，请确保在您的 Swarm 管理节点之一上添加 <code>monitoring == true</code>。</b>",
+      "categories": [
+        "监控"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/portainer.png",
       "repository": {
@@ -447,21 +536,23 @@
       "env": [
         {
           "name": "GRAFANA_USER",
-          "label": "Grafana admin user",
+          "label": "Grafana 管理员用户",
           "default": "admin"
         },
         {
           "name": "GRAFANA_PASSWORD",
-          "label": "Grafana admin password"
+          "label": "Grafana 管理员密码"
         }
       ]
     },
     {
       "id": 23,
       "type": 2,
-      "title": "Redis Cluster",
-      "description": "Open-source in-memory data structure store - Cluster mode",
-      "categories": ["database"],
+      "title": "Redis 集群",
+      "description": "开源内存数据结构存储 - 集群模式",
+      "categories": [
+        "数据库"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
       "repository": {
@@ -471,7 +562,7 @@
       "env": [
         {
           "name": "REDIS_PASSWD",
-          "label": "Redis password"
+          "label": "Redis 密码"
         }
       ]
     },
@@ -479,12 +570,17 @@
       "id": 24,
       "type": 1,
       "title": "RabbitMQ",
-      "description": "Highly reliable enterprise messaging system",
-      "categories": ["messaging"],
+      "description": "高可靠性企业消息系统",
+      "categories": [
+        "消息传递"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/rabbitmq.png",
       "image": "rabbitmq:latest",
-      "ports": ["5671/tcp", "5672/tcp"],
+      "ports": [
+        "5671/tcp",
+        "5672/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/lib/rabbitmq"
@@ -495,13 +591,17 @@
       "id": 25,
       "type": 1,
       "title": "Ghost",
-      "description": "Free and open-source blogging platform",
-      "categories": ["blog"],
-      "note": "Access the blog management interface under <code>/ghost/</code>.",
+      "description": "免费开源博客平台",
+      "note": "在 <code>/ghost/</code> 下访问博客管理界面。",
+      "categories": [
+        "博客"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ghost.png",
       "image": "ghost:latest",
-      "ports": ["2368/tcp"],
+      "ports": [
+        "2368/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/lib/ghost/content"
@@ -512,23 +612,27 @@
       "id": 26,
       "type": 1,
       "title": "Joomla",
-      "description": "Another free and open-source CMS",
-      "categories": ["CMS"],
+      "description": "另一个免费开源 CMS",
+      "categories": [
+        "CMS"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/joomla.png",
       "image": "joomla:latest",
       "env": [
         {
           "name": "JOOMLA_DB_HOST",
-          "label": "MySQL database host",
+          "label": "MySQL 数据库主机",
           "type": "container"
         },
         {
           "name": "JOOMLA_DB_PASSWORD",
-          "label": "Database password"
+          "label": "数据库密码"
         }
       ],
-      "ports": ["80/tcp"],
+      "ports": [
+        "80/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/www/html"
@@ -539,12 +643,16 @@
       "id": 27,
       "type": 1,
       "title": "Drupal",
-      "description": "Open-source content management framework",
-      "categories": ["CMS"],
+      "description": "开源内容管理框架",
+      "categories": [
+        "CMS"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/drupal.png",
       "image": "drupal:latest",
-      "ports": ["80/tcp"],
+      "ports": [
+        "80/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/www/html"
@@ -555,13 +663,17 @@
       "id": 28,
       "type": 1,
       "title": "Plone",
-      "description": "A free and open-source CMS built on top of Zope",
-      "note": "Default user and password are admin/admin",
-      "categories": ["CMS"],
+      "description": "一个基于 Zope 构建的免费开源 CMS",
+      "note": "默认用户和密码是 admin/admin",
+      "categories": [
+        "CMS"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/plone.png",
       "image": "plone:latest",
-      "ports": ["8080/tcp"],
+      "ports": [
+        "8080/tcp"
+      ],
       "volumes": [
         {
           "container": "/data"
@@ -572,8 +684,11 @@
       "id": 29,
       "type": 1,
       "title": "Sematext Docker Agent",
-      "description": "Collect logs, metrics and docker events",
-      "categories": ["Log Management", "Monitoring"],
+      "description": "收集日志、指标和 Docker 事件",
+      "categories": [
+        "日志管理",
+        "监控"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/sematext_agent.png",
       "image": "sematext/sematext-agent-docker:latest",
@@ -582,11 +697,11 @@
       "env": [
         {
           "name": "LOGSENE_TOKEN",
-          "label": "Logs token"
+          "label": "日志令牌"
         },
         {
           "name": "SPM_TOKEN",
-          "label": "SPM monitoring token"
+          "label": "SPM 监控令牌"
         }
       ],
       "volumes": [
@@ -600,15 +715,17 @@
       "id": 30,
       "type": 1,
       "title": "Datadog agent",
-      "description": "Collect events and metrics",
-      "categories": ["Monitoring"],
+      "description": "收集事件和指标",
+      "categories": [
+        "监控"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/datadog_agent.png",
       "image": "datadog/agent:latest",
       "env": [
         {
           "name": "DD_API_KEY",
-          "label": "Datadog API key"
+          "label": "Datadog API 密钥"
         }
       ],
       "volumes": [
@@ -633,23 +750,27 @@
       "id": 31,
       "type": 1,
       "title": "Mautic",
-      "description": "Open-source marketing automation platform",
-      "categories": ["marketing"],
+      "description": "开源营销自动化平台",
+      "categories": [
+        "营销"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mautic.png",
       "image": "mautic/mautic:latest",
       "env": [
         {
           "name": "MAUTIC_DB_HOST",
-          "label": "MySQL database host",
+          "label": "MySQL 数据库主机",
           "type": "container"
         },
         {
           "name": "MAUTIC_DB_PASSWORD",
-          "label": "Database password"
+          "label": "数据库密码"
         }
       ],
-      "ports": ["80/tcp"],
+      "ports": [
+        "80/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/www/html"
@@ -660,12 +781,17 @@
       "id": 32,
       "type": 1,
       "title": "Jenkins",
-      "description": "Open-source continuous integration tool",
-      "categories": ["continuous-integration"],
+      "description": "开源持续集成工具",
+      "categories": [
+        "持续集成"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/jenkins.png",
       "image": "jenkins/jenkins:lts-jdk11",
-      "ports": ["8080/tcp", "50000/tcp"],
+      "ports": [
+        "8080/tcp",
+        "50000/tcp"
+      ],
       "volumes": [
         {
           "container": "/var/jenkins_home"
@@ -676,13 +802,17 @@
       "id": 33,
       "type": 1,
       "title": "Redmine",
-      "description": "Open-source project management tool",
-      "note": "Default user and password are admin/admin",
-      "categories": ["project-management"],
+      "description": "开源项目管理工具",
+      "note": "默认用户和密码是 admin/admin",
+      "categories": [
+        "项目管理"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redmine.png",
       "image": "redmine:latest",
-      "ports": ["3000/tcp"],
+      "ports": [
+        "3000/tcp"
+      ],
       "volumes": [
         {
           "container": "/usr/src/redmine/files"
@@ -692,14 +822,19 @@
     {
       "id": 34,
       "type": 1,
-      "title": "File browser",
-      "description": "A web file manager",
-      "note": "Default credentials: admin/admin",
-      "categories": ["filesystem", "storage"],
+      "title": "文件浏览器",
+      "description": "一个 Web 文件管理器",
+      "note": "默认凭据：admin/admin",
+      "categories": [
+        "文件系统",
+        "存储"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/filebrowser.png",
       "image": "filebrowser/filebrowser:latest",
-      "ports": ["80/tcp"],
+      "ports": [
+        "80/tcp"
+      ],
       "volumes": [
         {
           "container": "/data"
@@ -715,7 +850,9 @@
       "type": 1,
       "title": "CommandBox",
       "description": "ColdFusion (CFML) CLI",
-      "categories": ["development"],
+      "categories": [
+        "开发"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ortussolutions-commandbox.png",
       "image": "ortussolutions/commandbox:latest",
@@ -726,14 +863,19 @@
           "preset": true
         }
       ],
-      "ports": ["8080/tcp", "8443/tcp"]
+      "ports": [
+        "8080/tcp",
+        "8443/tcp"
+      ]
     },
     {
       "id": 36,
       "type": 1,
       "title": "ContentBox",
-      "description": "Open-source modular CMS",
-      "categories": ["CMS"],
+      "description": "开源模块化 CMS",
+      "categories": [
+        "CMS"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ortussolutions-contentbox.png",
       "image": "ortussolutions/contentbox:latest",
@@ -754,7 +896,10 @@
           "preset": true
         }
       ],
-      "ports": ["8080/tcp", "8443/tcp"],
+      "ports": [
+        "8080/tcp",
+        "8443/tcp"
+      ],
       "volumes": [
         {
           "container": "/data/contentbox/db"
@@ -768,11 +913,17 @@
       "id": 37,
       "type": 1,
       "title": "Dokku",
-      "description": "Dokku setup as a container",
-      "categories": ["PaaS"],
+      "description": "作为容器部署的 Dokku",
+      "categories": [
+        "PaaS"
+      ],
       "platform": "linux",
       "image": "dokku/dokku",
-      "ports": ["22/tcp", "80/tcp", "443/tcp"],
+      "ports": [
+        "22/tcp",
+        "80/tcp",
+        "443/tcp"
+      ],
       "volumes": [
         {
           "container": "/mnt/dokku",
@@ -786,27 +937,31 @@
       "env": [
         {
           "name": "DOKKU_HOSTNAME",
-          "label": "Dokku hostname",
-          "description": "Global hostname to be registered by Dokku"
+          "label": "Dokku 主机名",
+          "description": "Dokku 将注册的全局主机名"
         },
         {
           "name": "DOKKU_HOST_ROOT",
-          "label": "Dokku host root",
+          "label": "Dokku 主机根路径",
           "default": "/var/lib/dokku/home/dokku",
-          "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'"
+          "description": "镜像构建缓存路径。通常设置为 <数据目录> + '/home/dokku'"
         }
       ]
     },
     {
       "id": 38,
       "type": 1,
-      "title": "Floating License Server",
-      "description": "License Server for Softing edgeConnector products",
-      "categories": ["edge"],
+      "title": "浮动许可证服务器",
+      "description": "Softing edgeConnector 产品的许可证服务器",
+      "categories": [
+        "边缘计算"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
       "image": "softingindustrial/floating-license-server:latest",
-      "ports": ["6200/tcp"],
+      "ports": [
+        "6200/tcp"
+      ],
       "interactive": true,
       "volumes": [
         {
@@ -817,10 +972,12 @@
     {
       "id": 39,
       "type": 2,
-      "title": "Portainer Agent",
-      "description": "Manage all the resources in your Swarm cluster",
-      "note": "The agent will be deployed globally inside your cluster and available on port 9001.",
-      "categories": ["portainer"],
+      "title": "Portainer 代理",
+      "description": "管理您的 Swarm 集群中的所有资源",
+      "note": "该代理将全局部署在您的集群中，并通过端口 9001 可用。",
+      "categories": [
+        "Portainer"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/portainer.png",
       "repository": {
@@ -833,9 +990,11 @@
       "type": 2,
       "title": "OpenFaaS",
       "name": "func",
-      "description": "Serverless functions made simple",
-      "note": "Deploys the API gateway and sample functions. You can access the UI on port 8080. <b>Warning</b>: the name of the stack must be 'func'.",
-      "categories": ["serverless"],
+      "description": "让无服务器功能变得简单",
+      "note": "部署 API 网关和示例功能。您可以通过 8080 端口访问 UI。<b>警告</b>：堆栈名称必须为 'func'。",
+      "categories": [
+        "无服务器"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/openfaas.png",
       "repository": {
@@ -847,9 +1006,11 @@
       "id": 41,
       "type": 2,
       "title": "IronFunctions",
-      "description": "Open-source serverless computing platform",
-      "note": "Deploys the IronFunctions API and UI.",
-      "categories": ["serverless"],
+      "description": "开源无服务器计算平台",
+      "note": "部署 IronFunctions API 和 UI。",
+      "categories": [
+        "无服务器"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ironfunctions.png",
       "repository": {
@@ -861,9 +1022,11 @@
       "id": 42,
       "type": 2,
       "title": "CockroachDB",
-      "description": "CockroachDB cluster",
-      "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
-      "categories": ["database"],
+      "description": "CockroachDB 集群",
+      "note": "部署一个不安全的 CockroachDB 集群，请参阅 <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB 文档</a>以了解生产部署。",
+      "categories": [
+        "数据库"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cockroachdb.png",
       "repository": {
@@ -875,9 +1038,11 @@
       "id": 43,
       "type": 2,
       "title": "WordPress",
-      "description": "WordPress setup with a MySQL database",
-      "note": "Deploys a WordPress instance connected to a MySQL database.",
-      "categories": ["CMS"],
+      "description": "使用 MySQL 数据库设置 WordPress",
+      "note": "部署一个连接到 MySQL 数据库的 WordPress 实例。",
+      "categories": [
+        "CMS"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
       "repository": {
@@ -887,8 +1052,8 @@
       "env": [
         {
           "name": "MYSQL_DATABASE_PASSWORD",
-          "label": "Database root password",
-          "description": "Password used by the MySQL root user."
+          "label": "数据库 root 密码",
+          "description": "MySQL root 用户使用的密码。"
         }
       ]
     },
@@ -896,9 +1061,11 @@
       "id": 44,
       "type": 3,
       "title": "WordPress",
-      "description": "WordPress setup with a MySQL database",
-      "note": "Deploys a WordPress instance connected to a MySQL database.",
-      "categories": ["CMS"],
+      "description": "使用 MySQL 数据库设置 WordPress",
+      "note": "部署一个连接到 MySQL 数据库的 WordPress 实例。",
+      "categories": [
+        "CMS"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
       "repository": {
@@ -908,8 +1075,8 @@
       "env": [
         {
           "name": "MYSQL_DATABASE_PASSWORD",
-          "label": "Database root password",
-          "description": "Password used by the MySQL root user."
+          "label": "数据库 root 密码",
+          "description": "MySQL root 用户使用的密码。"
         }
       ]
     },
@@ -917,9 +1084,11 @@
       "id": 46,
       "type": 3,
       "title": "OpenAMT",
-      "description": "OpenAMT Cloud Toolkit",
-      "note": "MPS password needs to be 8-32 characters including one uppercase, one lowercase letters, one base-10 digit and one special character.",
-      "categories": ["Cloud"],
+      "description": "OpenAMT 云工具包",
+      "note": "MPS 密码需要 8-32 个字符，包括一个大写字母、一个小写字母、一个十进制数字和一个特殊字符。",
+      "categories": [
+        "云"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
       "repository": {
@@ -929,43 +1098,45 @@
       "env": [
         {
           "name": "POSTGRES_USER",
-          "label": "Database user"
+          "label": "数据库用户"
         },
         {
           "name": "POSTGRES_PASSWORD",
-          "label": "Database password"
+          "label": "数据库密码"
         },
         {
           "name": "MPS_USER",
-          "label": "MPS user"
+          "label": "MPS 用户"
         },
         {
           "name": "MPS_PASSWORD",
-          "label": "MPS password"
+          "label": "MPS 密码"
         },
         {
           "name": "MPS_COMMON_NAME",
           "label": "MPS URL",
-          "description": "Used to connect to the MPS API."
+          "description": "用于连接 MPS API。"
         },
         {
           "name": "MPS_SECRET",
-          "label": "MPS Secret",
-          "description": "Strong secret key used to log into MPS."
+          "label": "MPS 密钥",
+          "description": "用于登录 MPS 的强密钥。"
         },
         {
           "name": "VAULT_SECRET",
-          "label": "Vault secret",
-          "description": "Secret token used to log into Vault (don't include '.' character)."
+          "label": "Vault 密钥",
+          "description": "用于登录 Vault 的秘密令牌（不包含 '.' 字符）。"
         }
       ]
     },
     {
       "id": 47,
       "type": 2,
-      "title": "Microsoft OMS Agent",
-      "description": "Microsoft Operations Management Suite Linux agent.",
-      "categories": ["OPS"],
+      "title": "Microsoft OMS 代理",
+      "description": "Microsoft Operations Management Suite Linux 代理。",
+      "categories": [
+        "运维"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
       "repository": {
@@ -975,13 +1146,13 @@
       "env": [
         {
           "name": "AZURE_WORKSPACE_ID",
-          "label": "Workspace ID",
-          "description": "Azure Workspace ID"
+          "label": "工作区 ID",
+          "description": "Azure 工作区 ID"
         },
         {
           "name": "AZURE_PRIMARY_KEY",
-          "label": "Primary key",
-          "description": "Azure primary key"
+          "label": "主密钥",
+          "description": "Azure 主密钥"
         }
       ]
     },
@@ -989,8 +1160,11 @@
       "id": 48,
       "title": "Sematext Docker Agent",
       "type": 2,
-      "categories": ["Log Management", "Monitoring"],
-      "description": "Collect logs, metrics and docker events",
+      "categories": [
+        "日志管理",
+        "监控"
+      ],
+      "description": "收集日志、指标和 Docker 事件",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/sematext_agent.png",
       "platform": "linux",
       "repository": {
@@ -1000,11 +1174,11 @@
       "env": [
         {
           "name": "LOGSENE_TOKEN",
-          "label": "Logs token"
+          "label": "日志令牌"
         },
         {
           "name": "SPM_TOKEN",
-          "label": "SPM monitoring token"
+          "label": "SPM 监控令牌"
         }
       ]
     },
@@ -1012,8 +1186,10 @@
       "id": 49,
       "title": "Datadog agent",
       "type": 2,
-      "categories": ["Monitoring"],
-      "description": "Collect events and metrics",
+      "categories": [
+        "监控"
+      ],
+      "description": "收集事件和指标",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/datadog_agent.png",
       "platform": "linux",
       "repository": {
@@ -1023,7 +1199,7 @@
       "env": [
         {
           "name": "API_KEY",
-          "label": "Datadog API key"
+          "label": "Datadog API 密钥"
         }
       ]
     },
@@ -1041,11 +1217,11 @@
       "env": [
         {
           "name": "owner_api_user",
-          "label": "API Username"
+          "label": "API 用户名"
         },
         {
           "name": "owner_api_password",
-          "label": "API Password"
+          "label": "API 密码"
         }
       ]
     },
@@ -1053,8 +1229,10 @@
       "id": 51,
       "type": 3,
       "title": "Dokku",
-      "description": "Dokku setup as a compose file",
-      "categories": ["PaaS"],
+      "description": "作为 Compose 文件部署的 Dokku",
+      "categories": [
+        "PaaS"
+      ],
       "platform": "linux",
       "repository": {
         "url": "https://github.com/portainer/templates",
@@ -1063,43 +1241,43 @@
       "env": [
         {
           "name": "VERSION",
-          "label": "Dokku version",
-          "description": "Version of Dokku to use ('latest' if empty)",
+          "label": "Dokku 版本",
+          "description": "要使用的 Dokku 版本（如果为空则为 'latest'）",
           "default": "latest"
         },
         {
           "name": "DOKKU_HOSTNAME",
-          "label": "Dokku hostname",
-          "description": "Global hostname to be registered by Dokku"
+          "label": "Dokku 主机名",
+          "description": "Dokku 将注册的全局主机名"
         },
         {
           "name": "VOLUME_PATH",
-          "label": "Dokku volume path",
-          "description": "Host path to be bound to /mnt/dokku (`/var/lib/dokku` if empty)",
+          "label": "Dokku 卷路径",
+          "description": "绑定到 /mnt/dokku 的主机路径（如果为空则为 `/var/lib/dokku`）",
           "default": "/var/lib/dokku"
         },
         {
           "name": "DOKKU_HOST_ROOT",
-          "label": "Dokku host root",
-          "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'",
+          "label": "Dokku 主机根路径",
+          "description": "镜像构建缓存路径。通常设置为 <数据目录> + '/home/dokku'",
           "default": "/var/lib/dokku/home/dokku"
         },
         {
           "name": "SSH_PORT",
-          "label": "SSH port",
-          "description": "Host port to expose SSH port of Dokku (22 if empty)",
+          "label": "SSH 端口",
+          "description": "暴露 Dokku SSH 端口的主机端口（如果为空则为 22）",
           "default": "22"
         },
         {
           "name": "HTTP_PORT",
-          "label": "HTTP port",
-          "description": "Host port to expose HTTP port of Dokku (80 if empty)",
+          "label": "HTTP 端口",
+          "description": "暴露 Dokku HTTP 端口的主机端口（如果为空则为 80）",
           "default": "80"
         },
         {
           "name": "HTTPS_PORT",
-          "label": "HTTPS port",
-          "description": "Host port to expose HTTPS port of Dokku (443 if empty)",
+          "label": "HTTPS 端口",
+          "description": "暴露 Dokku HTTPS 端口的主机端口（如果为空则为 443）",
           "default": "443"
         }
       ]
@@ -1108,8 +1286,10 @@
       "id": 52,
       "type": 2,
       "title": "LiveSwitch",
-      "description": "A basic LiveSwitch stack with gateway, caching, database and media server",
-      "categories": ["media"],
+      "description": "一个包含网关、缓存、数据库和媒体服务器的基础 LiveSwitch 堆栈",
+      "categories": [
+        "媒体"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
       "repository": {
@@ -1119,7 +1299,7 @@
       "env": [
         {
           "name": "POSTGRES_PASSWORD",
-          "label": "Postgres password"
+          "label": "Postgres 密码"
         }
       ]
     },
@@ -1127,8 +1307,10 @@
       "id": 53,
       "type": 3,
       "title": "LiveSwitch",
-      "description": "A basic LiveSwitch compose with gateway, caching, database and media server",
-      "categories": ["media"],
+      "description": "一个包含网关、缓存、数据库和媒体服务器的基础 LiveSwitch Compose",
+      "categories": [
+        "媒体"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
       "repository": {
@@ -1138,16 +1320,18 @@
       "env": [
         {
           "name": "POSTGRES_PASSWORD",
-          "label": "Postgres password"
+          "label": "Postgres 密码"
         }
       ]
     },
     {
       "id": 54,
       "type": 3,
-      "title": "TOSIBOX Lock for Container",
-      "description": "Lock for Container brings secure connectivity inside your industrial IoT devices",
-      "categories": ["edge"],
+      "title": "TOSIBOX 容器锁",
+      "description": "容器锁为您的工业 IoT 设备带来了安全连接",
+      "categories": [
+        "边缘计算"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/tosibox.png",
       "repository": {
@@ -1157,17 +1341,20 @@
       "env": [
         {
           "name": "LICENSE_KEY",
-          "label": "License key"
+          "label": "许可证密钥"
         }
       ]
     },
     {
       "id": 55,
       "type": 3,
-      "categories": ["edge"],
-      "title": "Softing EdgeConnector modbus",
-      "description": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
-      "note": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
+      "categories": [
+        "边缘计算"
+      ],
+      "title": "Softing EdgeConnector Modbus",
+      "description": "连接 Modbus TCP 传感器/PLC 并通过 OPC UA 和 MQTT 提供数据",
+      "note": "连接 Modbus TCP 传感器/PLC 并通过 OPC UA 和 MQTT 提供数据",
+      "platform": "linux",
       "logo": "https://www.gravatar.com/avatar/c7d3730588d3f501d6753aa22a731bc0?s=80&r=g&d=404",
       "repository": {
         "url": "https://github.com/portainer/templates",
@@ -1177,9 +1364,12 @@
     {
       "id": 56,
       "type": 3,
-      "categories": ["edge"],
+      "categories": [
+        "边缘计算"
+      ],
       "title": "Softing EdgeConnector 840D",
-      "description": "Access Siemens SINUMERIK 840D sl/pl controllers and provide data via OPC UA and MQTT",
+      "description": "访问西门子 SINUMERIK 840D sl/pl 控制器并通过 OPC UA 和 MQTT 提供数据",
+      "platform": "linux",
       "logo": "https://www.gravatar.com/avatar/c7d3730588d3f501d6753aa22a731bc0?s=80&r=g&d=404",
       "repository": {
         "url": "https://github.com/portainer/templates",
@@ -1189,9 +1379,12 @@
     {
       "id": 57,
       "type": 3,
-      "categories": ["edge"],
-      "title": "Softing EdgeConnector Siemens",
-      "description": "Connect Siemens SIMATIC S7-300/400/1200/1500 PLCs and provide the data via OPC UA and MQTT",
+      "categories": [
+        "边缘计算"
+      ],
+      "title": "Softing EdgeConnector 西门子",
+      "description": "连接西门子 SIMATIC S7-300/400/1200/1500 PLC 并通过 OPC UA 和 MQTT 提供数据",
+      "platform": "linux",
       "logo": "https://www.gravatar.com/avatar/c7d3730588d3f501d6753aa22a731bc0?s=80&r=g&d=404",
       "repository": {
         "url": "https://github.com/portainer/templates",
@@ -1201,9 +1394,12 @@
     {
       "id": 58,
       "type": 3,
-      "categories": ["edge"],
+      "categories": [
+        "边缘计算"
+      ],
       "title": "Softing EdgeConnector FANUC CNC",
-      "description": "Connect FANUC CNCs and provide the data via OPC UA and MQTT",
+      "description": "连接 FANUC CNC 并通过 OPC UA 和 MQTT 提供数据",
+      "platform": "linux",
       "logo": "https://www.gravatar.com/avatar/c7d3730588d3f501d6753aa22a731bc0?s=80&r=g&d=404",
       "repository": {
         "url": "https://github.com/portainer/templates",
@@ -1219,9 +1415,12 @@
     {
       "id": 59,
       "type": 3,
-      "categories": ["edge"],
-      "title": "Softing EdgeConnector Aggregator",
-      "description": "Offers a powerful OPC UA aggregation service which provides data via OPC UA, as well as MQTT",
+      "categories": [
+        "边缘计算"
+      ],
+      "title": "Softing EdgeConnector 聚合器",
+      "description": "提供强大的 OPC UA 聚合服务，通过 OPC UA 和 MQTT 提供数据",
+      "platform": "linux",
       "logo": "https://www.gravatar.com/avatar/c7d3730588d3f501d6753aa22a731bc0?s=80&r=g&d=404",
       "repository": {
         "url": "https://github.com/portainer/templates",
@@ -1237,10 +1436,13 @@
     {
       "id": 60,
       "type": 3,
-      "categories": ["edge"],
+      "categories": [
+        "边缘计算"
+      ],
       "title": "OPC Router",
-      "description": "No-code middleware for industrial applications The OPC Router connects PLCs, PCS, SCADA, MES, SQL databases and servers, label printers, e-mail servers and erp-systems via OPC UA, MQTT, REST, CSV and many others without any programming effort",
-      "note": "More information about the <a href=\"https://www.opc-router.com/terms-of-use-and-eula/?utm_source=DockerHub_runtime&utm_medium=click&utm_campaign=TermsOfUseAndEula\" target=\"_blank\">EULA</a>.",
+      "description": "用于工业应用的无代码中间件。OPC Router 无需任何编程工作即可通过 OPC UA、MQTT、REST、CSV 等多种方式连接 PLC、PCS、SCADA、MES、SQL 数据库和服务器、标签打印机、电子邮件服务器和 ERP 系统",
+      "note": "有关 <a href=\"https://www.opc-router.com/terms-of-use-and-eula/?utm_source=DockerHub_runtime&utm_medium=click&utm_campaign=TermsOfUseAndEula\" target=\"_blank\">EULA</a> 的更多信息。",
+      "platform": "linux",
       "logo": "https://store-images.s-microsoft.com/image/apps.45485.5f358ea4-e35f-478a-ab92-e85946891f86.b38fbf34-c2b9-4714-9d8a-1232c004df99.4469177b-aba0-4422-ad40-218ff1d967fb",
       "repository": {
         "url": "https://github.com/portainer/templates",
@@ -1249,18 +1451,18 @@
       "env": [
         {
           "name": "INITIAL_USERNAME",
-          "label": "Initial Admin User user"
+          "label": "初始管理员用户"
         },
         {
           "name": "INITIAL_PASSWORD",
-          "label": "Inital Admin User Password"
+          "label": "初始管理员用户密码"
         },
         {
           "name": "OR_I_ACCEPT_EULA",
-          "label": "Accept EULA",
+          "label": "接受 EULA",
           "select": [
             {
-              "text": "Yes, I accept",
+              "text": "是，我接受",
               "value": "true",
               "default": true
             }
@@ -1271,10 +1473,12 @@
     {
       "id": 61,
       "type": 3,
-      "title": "Pro Mosquitto with Management Center",
-      "description": "Commercial-grade Mosquitto MQTT broker with Management Center",
-      "note": "The Mosquitto broker password must be at least 12 characters.",
-      "categories": ["edge"],
+      "title": "带管理中心的专业版 Mosquitto",
+      "description": "带管理中心的商业级 Mosquitto MQTT 代理",
+      "note": "Mosquitto 代理密码必须至少为 12 个字符。",
+      "categories": [
+        "边缘计算"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cedalo.png",
       "repository": {
@@ -1284,20 +1488,20 @@
       "env": [
         {
           "name": "CEDALO_LICENSE_KEY",
-          "label": "License key"
+          "label": "许可证密钥"
         },
         {
           "name": "CEDALO_MOSQUITTO_PASSWORD",
-          "label": "Mosquitto password"
+          "label": "Mosquitto 密码"
         },
         {
           "name": "CEDALO_MC_USER",
-          "label": "Management Center username",
+          "label": "管理中心用户名",
           "default": "cedalo"
         },
         {
           "name": "CEDALO_MC_PASSWORD",
-          "label": "Management Center password"
+          "label": "管理中心密码"
         }
       ]
     },
@@ -1305,9 +1509,11 @@
       "id": 62,
       "type": 3,
       "title": "Node-Red",
-      "description": "Low-code programming for event-driven applications",
-      "note": "The TZ must be in Unix Format eg America/New_York - see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.",
-      "categories": ["edge"],
+      "description": "用于事件驱动应用的低代码编程",
+      "note": "时区（TZ）必须是 Unix 格式，例如 America/New_York - 请参阅 https://en.wikipedia.org/wiki/List_of_tz_database_time_zones。",
+      "categories": [
+        "边缘计算"
+      ],
       "platform": "linux",
       "logo": "https://avatars.githubusercontent.com/u/5375661?s=200&v=4",
       "repository": {
@@ -1317,17 +1523,19 @@
       "env": [
         {
           "name": "TZ",
-          "label": "Time Zone"
+          "label": "时区"
         }
       ]
     },
     {
       "id": 63,
       "type": 3,
-      "title": "InfluxDB for Edge",
-      "description": "InfluxDB Time Series Data Platformm - Single Server deployment",
-      "note": "Admin Password must be at least 10 characters",
-      "categories": ["edge"],
+      "title": "边缘计算版 InfluxDB",
+      "description": "InfluxDB 时序数据平台 - 单服务器部署",
+      "note": "管理员密码必须至少 10 个字符",
+      "categories": [
+        "边缘计算"
+      ],
       "platform": "linux",
       "logo": "https://store-images.s-microsoft.com/image/apps.61965.8c5e9f22-6a18-49a8-b8b9-6632de74e76c.3c45348f-0adf-4238-b024-bb993be0b664.ccdeeb79-9767-4e92-af5a-1b56f274aa99",
       "repository": {
@@ -1337,28 +1545,30 @@
       "env": [
         {
           "name": "influxadmin",
-          "label": "Influx Admin Username"
+          "label": "Influx 管理员用户名"
         },
         {
           "name": "influxadminpass",
-          "label": "Influx Admin User Password"
+          "label": "Influx 管理员用户密码"
         },
         {
           "name": "influxorg",
-          "label": "Influx Org Name"
+          "label": "Influx 组织名称"
         },
         {
           "name": "influxbucket",
-          "label": "Influx Bucket Name"
+          "label": "Influx 存储桶名称"
         }
       ]
     },
     {
       "id": 64,
       "type": 3,
-      "title": "EMQX Open Source MQTT Broker",
-      "description": "Open-source MQTT broker for IoT, IIoT, and connected vehicles - Single Broker deployment",
-      "categories": ["edge"],
+      "title": "EMQX 开源 MQTT 代理",
+      "description": "用于 IoT、IIoT 和车联网的开源 MQTT 代理 - 单代理部署",
+      "categories": [
+        "边缘计算"
+      ],
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/docker-library/docs/68aa4264fa058f323993fdaceacd63a8acbbeb48/emqx/logo.svg",
       "repository": {
@@ -1368,20 +1578,22 @@
       "env": [
         {
           "name": "EMQX_DASHBOARD__DEFAULT_USERNAME",
-          "label": "EMQX Dashboard Username"
+          "label": "EMQX 控制台用户名"
         },
         {
           "name": "EMQX_DASHBOARD__DEFAULT_PASSWORD",
-          "label": "EMQX Dashboard Password"
+          "label": "EMQX 控制台密码"
         }
       ]
     },
     {
       "id": 65,
       "type": 3,
-      "title": "Grafana Dashboard",
-      "description": "Multi-platform open-source interactive visualization web application",
-      "categories": ["edge"],
+      "title": "Grafana 控制台",
+      "description": "多平台开源交互式可视化 Web 应用",
+      "categories": [
+        "边缘计算"
+      ],
       "platform": "linux",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Grafana_logo.svg/1200px-Grafana_logo.svg.png",
       "repository": {
@@ -1391,21 +1603,23 @@
       "env": [
         {
           "name": "grafana_admin",
-          "label": "Grafana Dashboard Username"
+          "label": "Grafana 控制台用户名"
         },
         {
           "name": "grafana_password",
-          "label": "Grafana Dashboard Password"
+          "label": "Grafana 控制台密码"
         }
       ]
     },
     {
       "id": 66,
       "type": 3,
-      "title": "Inductive Automation - Ignition Gateway",
-      "description": "Ignition Gateway is the primary software service that drives everything in Ignition - Single Server Deployment",
-      "note": "For TZ see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones",
-      "categories": ["edge"],
+      "title": "Inductive Automation - Ignition 网关",
+      "description": "Ignition 网关是驱动 Ignition 中一切事物的核心软件服务 - 单服务器部署",
+      "note": "关于时区（TZ），请参阅 https://en.wikipedia.org/wiki/List_of_tz_database_time_zones",
+      "categories": [
+        "边缘计算"
+      ],
       "platform": "linux",
       "logo": "https://pbs.twimg.com/profile_images/859108636504805376/QHpq7wuh_400x400.jpg",
       "repository": {
@@ -1415,42 +1629,42 @@
       "env": [
         {
           "name": "EULA",
-          "label": "Accept Igntion EULA",
+          "label": "接受 Ignition EULA",
           "select": [
             {
-              "text": "Yes, I accept",
+              "text": "是，我接受",
               "value": "Y",
               "default": true
             }
           ]
-        }, 
+        },
         {
           "name": "adminuser",
-          "label": "Gateway UI Admin Username"
+          "label": "网关 UI 管理员用户名"
         },
         {
           "name": "adminpass",
-          "label": "Gateway UI Admin Password"
+          "label": "网关 UI 管理员密码"
         },
         {
           "name": "TZ",
-          "label": "Time Zone"
+          "label": "时区"
         },
         {
           "name": "gwedition",
-          "label": "Gateway Edition",
+          "label": "网关版本",
           "select": [
             {
-              "text": "Standard",
+              "text": "标准版",
               "value": "standard",
               "default": true
             },
-                        {
-              "text": "Edge",
+            {
+              "text": "边缘版",
               "value": "edge"
             },
-                        {
-              "text": "Maker",
+            {
+              "text": "创客版",
               "value": "maker"
             }
           ]
@@ -1461,8 +1675,10 @@
       "id": 67,
       "type": 3,
       "title": "Timescale DB",
-      "description": "Open-source time series database developed by Timescale Inc",
-      "categories": ["edge"],
+      "description": "由 Timescale Inc 开发的开源时序数据库",
+      "categories": [
+        "边缘计算"
+      ],
       "platform": "linux",
       "logo": "https://pbs.twimg.com/profile_images/1658849767865167876/hA5OXD9m_400x400.jpg",
       "repository": {
@@ -1472,16 +1688,18 @@
       "env": [
         {
           "name": "pgpassword",
-          "label": "Database root password"
+          "label": "数据库 root 密码"
         }
       ]
     },
     {
       "id": 68,
       "type": 3,
-      "title": "Manubes Edge Node",
-      "description": "High-performance cloud platform for industrial production management. Manubes is a no-code solution that is used to structure, monitor and control production data, systems and processes in the cloud.",
-      "categories": ["edge"],
+      "title": "Manubes 边缘节点",
+      "description": "用于工业生产管理的高性能云平台。Manubes 是一种无代码解决方案，用于在云中构建、监控和控制生产数据、系统和流程。",
+      "categories": [
+        "边缘计算"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/inray-manubes.png",
       "repository": {
@@ -1491,14 +1709,14 @@
       "env": [
         {
           "name": "MANUBES_SECRET",
-          "label": "manubes secret"
+          "label": "manubes 密钥"
         },
         {
           "name": "ACCEPT_EULA",
-          "label": "Accept EULA",
+          "label": "接受 EULA",
           "select": [
             {
-              "text": "Yes, I accept",
+              "text": "是，我接受",
               "value": "true",
               "default": true
             }
@@ -1509,9 +1727,11 @@
     {
       "id": 69,
       "type": 3,
-      "title": "Anyviz Cloud Adaptor",
-      "description": "The cloud adapter connects local devices via OPC-UA, Modbus, Siemens, Beckhoff ADS, EtherNet/IP, M-Bus and BACnet to the AnyViz Cloud.",
-      "categories": ["edge"],
+      "title": "Anyviz 云适配器",
+      "description": "云适配器通过 OPC-UA、Modbus、西门子、倍福 ADS、EtherNet/IP、M-Bus 和 BACnet 将本地设备连接到 AnyViz 云。",
+      "categories": [
+        "边缘计算"
+      ],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.cdn.digitaloceanspaces.com/logos/anyviz.png",
       "repository": {
@@ -1523,8 +1743,10 @@
       "id": 70,
       "type": 3,
       "title": "Litmus Edge",
-      "description": "Litmus Edge is an edge data platform that enables industrial AI at scale. It connects, processes, and analyzes real-time OT data at the edge to power smart manufacturing.",
-      "categories": ["edge"],
+      "description": "Litmus Edge 是一个边缘数据平台，支持工业 AI 规模化应用。它在边缘连接、处理和分析实时 OT 数据，为智能制造提供动力。",
+      "categories": [
+        "边缘计算"
+      ],
       "platform": "linux",
       "logo": "https://www.gravatar.com/avatar/3c545a4e847eb960bfc9bf5bf877c979?s=120&r=g&d=404",
       "repository": {
@@ -1535,9 +1757,11 @@
     {
       "id": 71,
       "type": 3,
-      "title": "Litmus Edge Digital Factory Demo",
-      "description": "Demo System for Litmus Edge. Litmus Edge is an edge data platform that enables industrial AI at scale. It connects, processes, and analyzes real-time OT data at the edge to power smart manufacturing. Note: Requires 5GB Disk Space / 3GB RAM available on the Host for deployment to succeed.",
-      "categories": ["edge"],
+      "title": "Litmus Edge 数字化工厂演示",
+      "description": "Litmus Edge 演示系统。Litmus Edge 是一个边缘数据平台，支持工业 AI 规模化应用。它在边缘连接、处理和分析实时 OT 数据，为智能制造提供动力。注意：部署成功需要在主机上提供 5GB 磁盘空间 / 3GB 内存。",
+      "categories": [
+        "边缘计算"
+      ],
       "platform": "linux",
       "logo": "https://www.gravatar.com/avatar/3c545a4e847eb960bfc9bf5bf877c979?s=120&r=g&d=404",
       "repository": {
